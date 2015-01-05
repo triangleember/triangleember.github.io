@@ -1,0 +1,11 @@
+body {
+  background: image-url("ember-bg.svg") #faf4f1 top center no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  @include outer-container;
+  max-width: em(736);
+  padding-top: em(112);
+}
+

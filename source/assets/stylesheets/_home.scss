@@ -1,0 +1,104 @@
+.ember-logo {
+  @include margin(null auto);
+  display: block;
+  margin-bottom: em(32);
+  width: em(256);
+}
+
+.next-meetup {
+  @include clearfix;
+  background-color: white;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom-right-radius: $base-border-radius;
+  border: $base-border;
+  box-shadow: $base-box-shadow;
+  margin-bottom: 12em;
+  padding: 4em;
+  position: relative;
+
+  &:before {
+    @include position(absolute, -5px -5px null -5px);
+    background-color: $base-accent-color;
+    border: 1px solid darken($base-accent-color, 10%);
+    box-shadow: $base-box-shadow;
+    content: "";
+    display: block;
+    height: 8px;
+  }
+
+  p {
+    color: $light-font-color;
+    font-size: em(18);
+    margin-bottom: 1em;
+  }
+}
+
+.next-meetup-location {
+  font-size: em(15);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.rsvp {
+  @include transition(background 0.1s ease-in);
+  border-radius: $base-border-radius;
+  border: 1px solid $base-accent-color;
+  box-shadow: $base-box-shadow;
+  color: $base-accent-color;
+  float: right;
+  letter-spacing: 1px;
+  margin-top: 6em;
+  padding: 1em 2em;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($base-accent-color, 0.075);
+    color: $base-accent-color;
+  }
+
+  &:active {
+    box-shadow: none;
+    top: 1px;
+  }
+}
+
+.sponsors {
+  @include clearfix;
+  background-color: rgba(white, 0.8);
+  border-top: $base-border;
+
+  .wrapper {
+    @include display(flex);
+    padding-top: 0;
+  }
+
+  .sponsor {
+    @include align-items(center);
+    @include display(flex);
+    @include transition(opacity 0.15s ease-in);
+    opacity: 0.75;
+    padding: em(60) em(20);
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:not(:first-child) {
+      border-left: $base-border;
+    }
+  }
+
+  img {
+    margin-right: 1em;
+    max-width: em(48);
+    width: 100%;
+  }
+
+  p {
+    color: $light-font-color;
+    font-style: italic;
+    margin-bottom: 0;
+  }
+}

@@ -2,74 +2,63 @@
 title: Triangle Ember
 ---
 
-<%= image_tag "ember-logo.png", title: "Ember.JS logo" %>
+<div class="wrapper">
+  <%= image_tag "ember-logo.png", title: "Ember.JS logo", class: "ember-logo" %>
 
-<h1>The Triangle's Ember.JS Meetup</h1>
+  <h1>The Triangle's Ember.JS Meetup</h1>
+  <h2>Monthly talks about Ember.JS, for beginners and experts</h2>
 
-<p>
-  Etiam id ligula quis erat dapibus iaculis a sed risus. Nullam sollicitudin
-  enim et ipsum egestas commodo. Morbi non dolor nec urna aliquet consequat a
-  eget enim. Curabitur a neque id nibh pretium posuere. Ut consectetur, lectus
-  eu vehicula lacinia.
-</p>
+  <section class="next-meetup">
+    <h3>November 18</h3>
+    <span>06:30 PM at</span>
+    <a class="next-meetup-location" href="#">Rally Software</a>
 
-<p>
-  Vestibulum convallis eu metus sed ultricies. Morbi congue dolor velit, at
-  posuere lacus elementum semper. Vivamus orci lectus, suscipit eu elit sit
-  amet, pulvinar laoreet magna. Phasellus placerat egestas orci, eu convallis
-  lorem malesuada ac.
-</p>
+    <hr>
 
-<section class="next-meetup">
-  <time>
-    November 18
-    <span class="separator">&bull;</span>
-    06:30 PM
-  </time>
+    <h4>Deploying Your Ember App</h4>
 
-  <a class="next-meetup-location" href="#">Rally Software</a>
+    <p>
+      Anthony Ross will be giving us a tour through how his company is currently
+      deploying. The presentation will be short and we'll allow plenty of time
+      for everyone else to talk about their own strategies so bring your laptops
+      and code!
+    </p>
 
-  <hr>
+    <p>
+      Rally Software (https://www.rallydev.com/) has offered to let us use their
+      space in downtown Raleigh for the meetup.
+    </p>
 
-  <h2>Deploying Your Ember App</h2>
+    <p>
+      Please park in visitors lot ON Haynes Street (across the street from the
+      building).
+    </p>
 
-  <p>
-    Anthony Ross will be giving us a tour through how his company is currently
-    deploying. The presentation will be short and we'll allow plenty of time for
-    everyone else to talk about their own strategies so bring your laptops and
-    code!
-  </p>
+    <p>
+      Rally will have blue tape on the ground guiding people to their classroom
+      space.
+    </p>
 
-  <p>
-    Rally Software (https://www.rallydev.com/) has offered to let us use their
-    space in downtown Raleigh for the meetup.
-  </p>
+    <p>
+      *Note: you will not be able to enter through any other door considering
+      the event is after hours. Therefore parking in the right lot is essential
+      to finding the only door open for entry.
+    </p>
 
-  <p>
-    Please park in visitors lot ON Haynes Street (across the street from the
-    building).
-  </p>
+    <a class="rsvp" href="#">RSVP on Meetup</a>
+  </section>
+</div>
 
-  <p>
-    Rally will have blue tape on the ground guiding people to their classroom
-    space.
-  </p>
+<section class="sponsors">
+  <div class="wrapper">
+    <a href="http://thoughtbot.com" class="sponsor">
+      <%= image_tag "ralph.png", title: "thoughtbot" %>
+      <p>Hosting, programming, and website design by thoughtbot.</p>
+    </a>
 
-  <p>
-    *Note: you will not be able to enter through any other door considering the
-    event is after hours. Therefore parking in the right lot is essential to
-    finding the only door open for entry.
-  </p>
-
-  <a class="rsvp" href="#">RSVP on Meetup</a>
+    <a href="http://rallydev.com" class="sponsor">
+      <%= image_tag "rally-logo.png", title: "Rally Software" %>
+      <p>Event space, beer and pizza provided by Rally Software.</p>
+    </a>
+  </div>
 </section>
-
-<h3>Sponsors</h3>
-
-<a href="http://thoughtbot.com">
-  <%= image_tag "thoughtbot-logo.png", title: "thoughtbot" %>
-</a>
-
-<a href="http://rallydev.com">
-  <%= image_tag "rally-logo.png", title: "Raleigh Software" %>
-</a>

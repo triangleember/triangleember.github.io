@@ -1,5 +1,5 @@
 // Typography
-$sans-serif: $helvetica;
+$sans-serif: "ff-tisa-sans-web-pro", $helvetica;
 $serif: $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
@@ -14,27 +14,33 @@ $base-border-radius: em(3);
 // Colors
 $blue: #477DCA;
 $dark-gray: #333;
-$medium-gray: #999;
 $light-gray: #DDD;
+$light-green: #E6EFC2;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
-$light-green: #E6EFC2;
+$medium-gray: #999;
+$orange: #e14a30;
 
 // Background Color
 $base-background-color: white;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$light-font-color: lighten($base-font-color, 15%);
+$base-accent-color: $orange;
 
 // Link Colors
-$base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$base-link-color: $blue;
+$hover-link-color: darken($base-link-color, 15%);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
 // Border color
 $base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Box Shadow
+$base-box-shadow: 0 1px 3px rgba(black, 0.075);
 
 // Flash Colors
 $alert-color: $light-yellow;
