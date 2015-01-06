@@ -3,39 +3,8 @@ title: Triangle Ember
 ---
 
 <div class="wrapper">
-  <%= link_to "Submit Talk", "/proposal", class: "nav-link" %>
-
-  <%= image_tag "ember-logo.png", title: "Ember.JS logo", class: "ember-logo" %>
-
-  <h1>The Triangle's Ember.JS Meetup</h1>
-  <h2>Monthly talks about Ember.JS, for beginners and experts</h2>
-
-  <section class="next-meetup" data-role="event">
-    <h3 data-role="date">event date</h3>
-    <span data-role="time">event time</span>
-    <span>at</span>
-    <a class="next-meetup-location" href="#" data-role="venue-name">Venue Name</a>
-
-    <hr>
-
-    <h4 data-role="name">Event title</h4>
-
-    <div data-role="description">Event Description</div>
-
-    <a class="button rsvp" href="#" data-role="rsvp-link">RSVP on Meetup</a>
-  </section>
+  <%= partial "header" %>
+  <%= partial "next-meetup" %>
 </div>
 
-<section class="sponsors">
-  <div class="wrapper">
-    <a href="http://thoughtbot.com" class="sponsor">
-      <%= image_tag "ralph.png", title: "thoughtbot" %>
-      <p>Hosting, programming, and website design by thoughtbot.</p>
-    </a>
-
-    <a href="http://rallydev.com" class="sponsor">
-      <%= image_tag "rally-logo.png", title: "Rally Software" %>
-      <p>Event space, beer and pizza provided by Rally Software.</p>
-    </a>
-  </div>
-</section>
+<%= partial "sponsors" %>
