@@ -1,3 +1,12 @@
+.nav-link {
+  @include position(absolute, 2em 2em null null);
+  color: $base-accent-color;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: em(13);
+  font-weight: 800;
+}
+
 .ember-logo {
   @include margin(null auto);
   display: block;
@@ -40,28 +49,7 @@
 }
 
 .rsvp {
-  @include transition(background 0.1s ease-in);
-  border-radius: $base-border-radius;
-  border: 1px solid $base-accent-color;
-  box-shadow: $base-box-shadow;
-  color: $base-accent-color;
-  float: right;
-  letter-spacing: 1px;
   margin-top: 6em;
-  padding: 1em 2em;
-  position: relative;
-  text-transform: uppercase;
-
-  &:hover,
-  &:focus {
-    background-color: rgba($base-accent-color, 0.075);
-    color: $base-accent-color;
-  }
-
-  &:active {
-    box-shadow: none;
-    top: 1px;
-  }
 }
 
 .sponsors {

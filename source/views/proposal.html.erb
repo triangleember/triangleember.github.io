@@ -1,0 +1,21 @@
+---
+title: Submit a Talk | Triangle Ember
+---
+
+<div class="wrapper">
+  <%= link_to "Back to Home &rarr;".html_safe, "/", class: "nav-link" %>
+
+  <h4>Submit a Talk Proposal</h4>
+  <form action="#" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email">
+
+    <label for="topic">Topic of Discussion</label>
+    <textarea name="topic" id="topic"></textarea>
+
+    <input type="submit" value="Submit Talk">
+  </form>
+</div>

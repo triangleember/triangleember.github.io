@@ -1,3 +1,7 @@
+form {
+  @include clearfix;
+}
+
 fieldset {
   background: lighten($base-border-color, 10);
   border: 1px solid $base-border-color;
@@ -53,6 +57,7 @@ select[multiple=multiple] {
 }
 
 textarea {
+  height: 12em;
   resize: vertical;
 }
 

@@ -1,10 +1,33 @@
 button,
-input[type="submit"] {
-  @extend %button;
+input[type="submit"],
+.button {
   @include appearance(none);
-  border: none;
+  @include transition(background 0.1s ease-in);
+  background-color: white;
+  border-radius: $base-border-radius;
+  border: 1px solid $base-accent-color;
+  box-shadow: $base-box-shadow;
+  color: $base-accent-color;
   cursor: pointer;
+  float: right;
+  letter-spacing: 1px;
+  margin-top: 1em;
+  padding: 1em 2em;
+  position: relative;
+  text-transform: uppercase;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($base-accent-color, 0.075);
+    color: $base-accent-color;
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: none;
+    top: 1px;
+  }
 }
