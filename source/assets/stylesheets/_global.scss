@@ -1,0 +1,30 @@
+body {
+  background: image-url("ember-bg.svg") #faf4f1 top center no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  @include outer-container;
+  @include padding(em(112) em(8) null em(8));
+  max-width: em(736);
+
+  .thanks & {
+    padding-top: em(208);
+    text-align: center;
+  }
+}
+
+.nav-link {
+  @include position(absolute, 2em 2em null null);
+  color: $base-accent-color;
+  font-size: em(13);
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  .thanks & {
+    display: inline-block;
+    margin-top: 3em;
+    position: static;
+  }
+}
