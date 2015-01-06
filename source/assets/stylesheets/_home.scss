@@ -21,18 +21,31 @@
   border-bottom-right-radius: $base-border-radius;
   border: $base-border;
   box-shadow: $base-box-shadow;
-  margin-bottom: 12em;
-  padding: 4em;
+  padding: 2em;
   position: relative;
 
+  @include media($medium-screen-up) {
+    margin-bottom: 2em;
+    padding: 4em;
+  }
+
+  @include media($large-screen-up) {
+    margin-bottom: 12em;
+  }
+
   &:before {
-    @include position(absolute, -5px -5px null -5px);
+    @include position(absolute, -5px 0 null 0);
     background-color: $base-accent-color;
     border: 1px solid darken($base-accent-color, 10%);
     box-shadow: $base-box-shadow;
     content: "";
     display: block;
     height: 8px;
+
+    @include media(medium-screen-up) {
+      left: -5px;
+      right: -5px;
+    }
   }
 
   p {
@@ -49,16 +62,25 @@
 }
 
 .rsvp {
-  margin-top: 6em;
+  margin-top: 2em;
+
+  @include media($medium-screen-up) {
+    margin-top: 6em;
+  }
 }
 
 .sponsors {
   @include clearfix;
-  background-color: rgba(white, 0.8);
-  border-top: $base-border;
+
+  @include media($medium-screen-up) {
+    border-top: $base-border;
+  }
+
+  @include media($large-screen-up) {
+    background-color: rgba(white, 0.8);
+  }
 
   .wrapper {
-    @include display(flex);
     padding-top: 0;
   }
 
@@ -69,12 +91,22 @@
     opacity: 0.75;
     padding: em(60) em(20);
 
-    &:hover {
-      opacity: 1;
+    &:not(:first-child) {
+      border-top: $base-border;
     }
 
-    &:not(:first-child) {
-      border-left: $base-border;
+    @include media($medium-screen-up) {
+      float: left;
+      width: 50%;
+
+      &:not(:first-child) {
+        border-top: none;
+        border-left: $base-border;
+      }
+    }
+
+    &:hover {
+      opacity: 1;
     }
   }
 

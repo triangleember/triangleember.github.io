@@ -14,10 +14,12 @@ input[type="submit"],
   margin-top: 1em;
   padding: 1em 2em;
   position: relative;
+  text-align: center;
   text-transform: uppercase;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  width: 100%;
 
   &:hover,
   &:focus {
@@ -29,5 +31,13 @@ input[type="submit"],
   &:active {
     box-shadow: none;
     top: 1px;
+  }
+
+  @include media($medium-screen-up) {
+    width: auto;
+  }
+
+  .proposal & {
+    margin-bottom: 2em;
   }
 }
