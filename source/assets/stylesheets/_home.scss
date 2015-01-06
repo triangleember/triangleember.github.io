@@ -42,7 +42,7 @@
     display: block;
     height: 8px;
 
-    @include media(medium-screen-up) {
+    @include media($medium-screen-up) {
       left: -5px;
       right: -5px;
     }
