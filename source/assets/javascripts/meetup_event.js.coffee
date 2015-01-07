@@ -1,7 +1,7 @@
 class window.MeetupEvent
   constructor: (@eventData) ->
 
-  name: -> @eventData.name
+  name: -> @eventData?.name
 
   mapUrl: -> new MeetupMap(@address()).url()
 

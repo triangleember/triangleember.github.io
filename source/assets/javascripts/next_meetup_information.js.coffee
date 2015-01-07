@@ -4,14 +4,18 @@ window.displayInformationForNextMeetup = ->
   meetup.loadEvents().done ->
     nextEvent = meetup.firstEvent()
 
-    setName(nextEvent.name())
-    setDescription(nextEvent.description())
-    setDateTime(nextEvent)
-    setVenueName(nextEvent.venueName())
-    setVenueLocation(nextEvent.mapUrl())
-    setRsvpUrl(nextEvent.eventUrl())
+    if nextEvent.name()
+      setName(nextEvent.name())
+      setDescription(nextEvent.description())
+      setDateTime(nextEvent)
+      setVenueName(nextEvent.venueName())
+      setVenueLocation(nextEvent.mapUrl())
+      setRsvpUrl(nextEvent.eventUrl())
 
-    showMeetup()
+      showMeetup()
+
+    else
+      showEmpty()
 
 setRsvpUrl = (url) ->
   eventOnPage("rsvp-link").prop("href", url)
@@ -39,4 +43,7 @@ eventOnPage = (role) ->
   $("[data-role='event'] [data-role='#{role}']")
 
 showMeetup = ->
-  $(".event").show()
+  $(".js-scheduled").show()
+
+showEmpty = ->
+  $(".js-unscheduled").show()

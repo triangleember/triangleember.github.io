@@ -15,13 +15,14 @@
   width: em(256);
 }
 
-.next-meetup {
+.box {
   @include clearfix;
   background-color: white;
   border-bottom-left-radius: $base-border-radius;
   border-bottom-right-radius: $base-border-radius;
   border: $base-border;
   box-shadow: $base-box-shadow;
+  display: none;
   padding: 2em;
   position: relative;
 

@@ -7,6 +7,10 @@ body {
   line-height: $unitless-line-height;
 
   @include media($medium-screen-up) {
+    font-size: $base-font-size * .9;
+  }
+
+  @include media($wide-screen-up) {
     font-size: $base-font-size;
   }
 }
